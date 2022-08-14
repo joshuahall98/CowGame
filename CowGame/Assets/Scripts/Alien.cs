@@ -128,7 +128,6 @@ public class Alien : MonoBehaviour
     {
         speed = speed * 6;
         angry = true;
-        //render.color = new Color(1, 0, 0);
         evilCowSprite.SetActive(true);
         cowSprite.SetActive(false);
         Moo();

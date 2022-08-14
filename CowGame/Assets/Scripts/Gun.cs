@@ -20,6 +20,7 @@ public class Gun : MonoBehaviour
     {
         if(canFire == true)
         {
+            FindObjectOfType<SoundManager>().Play("Shotgun");
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
             canFire = false;
